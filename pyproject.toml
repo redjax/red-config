@@ -18,6 +18,9 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
+[project.urls]
+Repository = "https://github.com/redjax/red-config"
+
 [tool.pdm.scripts]
 
 ## Format scripts
@@ -43,3 +46,7 @@ dev = [
     "ruff>=0.0.278",
     "pytest>=7.4.0",
 ]
+
+[python]
+## https://stackoverflow.com/a/70958111
+PYTHON_KEYRING_BACKEND="keyring.backends.null.Keyring"
